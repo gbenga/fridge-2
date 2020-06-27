@@ -1,27 +1,61 @@
-import React, { Component } from "react";
-import { Header } from "semantic-ui-react";
+import React from "react";
+import { Header, Image, Segment, Button, Grid } from "semantic-ui-react";
+import Card from "./Card";
 
 export default class ItemCard extends React.Component {
+  state = {
+    showDetails: false,
+  };
+
+  toggleDetailsForCard = () => {
+    this.setState({
+      showDetails: !this.state.showDetails,
+    });
+  };
+
+  showDetailsForCard = (i) => <Card i={i} />;
+
   render() {
     const i = this.props.item;
+
     const foodAddress = i.name.toLowerCase().split(" ").join("-");
     let itemImage = require(`../item-imgs/${foodAddress}.jpg`);
 
     return (
-      <div>
-        <Header as="h3">{i.name}</Header>
-        <img src={itemImage} width="200px" />
-      </div>
+      <Segment>
+        <Header as="h2">{i.name}</Header>
+        <Grid columns={2} >
+          <Grid.Row>
+            <Grid.Column>
+          <Image
+            circular
+            src={itemImage}
+            size="tiny"
+          />
+          </Grid.Column>
+          <Grid.Column>
+        {this.state.showDetails ? (
+          <>
+            {this.showDetailsForCard(i)}
+            <button
+              className="ui primary button"
+              onClick={this.toggleDetailsForCard}
+            >
+              Hide Details
+            </button>
+          </>
+        ) : (
+          <button
+            className="ui primary button"
+            onClick={this.toggleDetailsForCard}
+          >
+            Details
+          </button>
+        )}
+        </Grid.Column>
+        </Grid.Row>
+        </Grid>
+      </Segment>
     );
   }
 }
-
-// itemImage={`../item-imgs/${item.name
-//   .toLowerCase()
-//   .replace(" ", "-")}.jpg`}
-
-// id: 1,
-// name: "Yoghurt",
-// image: "",
-// expires: "",
-// user_id: 2,
