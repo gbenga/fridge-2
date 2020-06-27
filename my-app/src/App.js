@@ -16,18 +16,16 @@ export default class App extends Component {
     API.getItems().then(array => this.setState({items: array}))
   }
 
-  updateState(string) {
-    console.log(string);
-    
-    this.setState({search: string})
-    // debugger  
+  updateFilter(e) {
+    console.log(e.target.value);
+    this.setState({ search: e.target.value }) 
   }
 
   render() {
     return (
       <>
         <Segment basic padded="very">
-          <Menu updateState={this.updateState} />
+          <Menu updateFilter={this.updateFilter} />
         </Segment>
         <Container items={this.state.items} />
       </>

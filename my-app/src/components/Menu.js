@@ -4,36 +4,11 @@ export default class Menu extends Component {
   render() {
     return (
       <>
-        <input type="text" onChange={(e)=> this.props.updateState(e.target.value)}/>
+        <input type="text" onChange={this.props.updateFilter}/>
       </>
     )
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // import React, { Component } from "react";
