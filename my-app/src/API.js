@@ -8,4 +8,8 @@ function test() {
     console.log("2");
 }
 
-export default { getItems }
+function console(){
+    console.log("Hello World")
+}
+
+export default { getItems, console }
