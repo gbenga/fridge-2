@@ -4,4 +4,8 @@ function getItems() {
     .catch(err => console.error(err));
 }
 
-export default { getItems }
+function console(){
+    console.log("Hello World")
+}
+
+export default { getItems, console }
