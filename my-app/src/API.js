@@ -8,8 +8,10 @@ function test() {
     console.log("2");
 }
 
-function console(){
-    console.log("Hello World")
+function getUsers() {
+    return fetch("http://localhost:3001/users")
+    .then(resp => resp.json())
+    .catch(err => console.error(err));
 }
 
-export default { getItems, console }
+export default { getItems, getUsers }

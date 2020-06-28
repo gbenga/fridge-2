@@ -9,8 +9,8 @@ const CardExampleCard = (props) => (
         <span className="date">Price: {props.i.price}</span>
       </Card.Meta>
       <Card.Description>Quantity: {props.i.quantity}</Card.Description>
-      <Card.Description>{props.i.purchased}</Card.Description>
-      <Card.Description>{props.i.expires}</Card.Description>
+      <Card.Description>Purchased: {props.i.purchased}</Card.Description>
+      <Card.Description>Expires: {props.i.expires}</Card.Description>
     </Card.Content>
     <Card.Content extra>
       <a>
