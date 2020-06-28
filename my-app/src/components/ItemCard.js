@@ -52,6 +52,11 @@ export default class ItemCard extends React.Component {
             Details
           </button>
         )}
+            <button className="ui google plus button"
+              onClick={() => this.props.deleteItem(i.id)}
+            >
+              Delete
+            </button>
         </Grid.Column>
         </Grid.Row>
         </Grid>

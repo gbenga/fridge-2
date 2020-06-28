@@ -1,86 +1,85 @@
 {
-    "items": [
-      {
-        "id": 1,
-        "name": "Yoghurt",
-        "category": "Dairy",
-        "price": "10",
-        "quantity": "2",
-        "purchased": "06/10/2020",
-        "expires": "06/30/2020",
-        "userId": 2
-      },
-      {
-        "id": 2,
-        "name": "Milk",
-        "category": "Dairy",
-        "price": "2",
-        "quantity": "4",
-        "purchased": "06/07/2020",
-        "expires": "06/30/2020",
-        "userId": 1
-      },
-      {
-        "id": 3,
-        "name": "Grapes",
-        "category": "Fruit",
-        "price": "5",
-        "quantity": "4",
-        "purchased": "05/07/2020",
-        "expires": "03/30/2020",
-        "userId": 1
-      },
-      {
-        "id": 4,
-        "name": "Mango",
-        "category": "Fruit",
-        "price": "14",
-        "quantity": "4",
-        "purchased": "05/07/2020",
-        "expires": "08/17/2020",
-        "userId": 1
-      },
-      {
-        "id": 5,
-        "name": "Butter",
-        "category": "Dairy",
-        "price": "10",
-        "quantity": "4",
-        "purchased":"05/27/2020", 
-        "expires": "01/31/2020",
-        "userId": 1
-      },
-      {
-        "id": 6,
-        "name": "Apple Juice",
-        "category" : "Juice",
-        "price": "20",
-        "quantity": "5",
-        "purchased": "20/06/2020",
-        "expires": "21/06/2020",
-        "userId": 2
-      },
-      {
-        "id": 7,
-        "name": "Broccoli",
-        "category": "Vegetable",
-        "price": "5",
-        "quantity": "20",
-        "purchased": "20/06/2020",
-        "expires": "21/06/2020",
-        "userId": 2
-      }
-    ],
-    "users": [
-      {
-        "id": 1,
-        "name": "Gbenga",
-        "image": ""
-      },
-      {
-        "id": 2,
-        "name": "Adao",
-        "image": ""
-      }
-    ]
-  }
+  "items": [
+    {
+      "id": 2,
+      "name": "Milk",
+      "category": "Dairy",
+      "price": "2",
+      "quantity": "4",
+      "purchased": "06/07/2020",
+      "expires": "06/30/2020",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "name": "Grapes",
+      "category": "Fruit",
+      "price": "5",
+      "quantity": "4",
+      "purchased": "05/07/2020",
+      "expires": "03/30/2020",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "name": "Mango",
+      "category": "Fruit",
+      "price": "14",
+      "quantity": "4",
+      "purchased": "05/07/2020",
+      "expires": "08/17/2020",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "name": "Butter",
+      "category": "Dairy",
+      "price": "10",
+      "quantity": "4",
+      "purchased": "05/27/2020",
+      "expires": "01/31/2020",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "name": "Apple Juice",
+      "category": "Juice",
+      "price": "20",
+      "quantity": "5",
+      "purchased": "20/06/2020",
+      "expires": "21/06/2020",
+      "userId": 2
+    },
+    {
+      "id": 7,
+      "name": "Broccoli",
+      "category": "Vegetable",
+      "price": "5",
+      "quantity": "20",
+      "purchased": "20/06/2020",
+      "expires": "21/06/2020",
+      "userId": 2
+    },
+    {
+      "name": "Yoghurt",
+      "category": "dairy",
+      "price": "3",
+      "quantity": "6",
+      "purchased": "2020-06-28",
+      "expires": "2020-07-11",
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Gbenga",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Adao",
+      "image": ""
+    }
+  ]
+}

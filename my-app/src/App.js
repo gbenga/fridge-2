@@ -11,7 +11,8 @@ export default class App extends Component {
   state = {
     items: [],
     users: [],
-    search: ""
+    search: "",
+    form: false
   };
 
   componentDidMount() {
@@ -27,19 +28,36 @@ export default class App extends Component {
     return arrayOfItems.filter(item => item.name.toLowerCase().includes(this.state.search.toLocaleLowerCase()))
   }
 
+  createNewItem = (item) => {
+      API.postNewItem(item).then(resp => this.setState({items: [...this.state.items, resp]}))
+      // then(API.getItems().then(array => this.setState({items: array})))
+  }
+
   itemToRender = () => {
     const items = this.filterBySearch(this.state.items)
     return items
+  }
+
+
+  showForm = () => {
+    // debugger
+    this.setState({form: !this.state.form})
+  }
+
+  deleteItem = (id) => {
+    API.destroyItem(id).then(this.setState({items: this.state.items.filter(item => item.id !== id)}))
   }
 
   render() {
     return (
       <Fragment>
         <Segment basic padded="very">
-          <Menu updateFilter={this.updateFilter}/>
-          <Form users={this.state.users}/>
+          <Menu updateFilter={this.updateFilter} showForm={this.showForm} toggleForm={this.state.form}/>
+          {this.state.form 
+          ?  <Form users={this.state.users} createNewItem={this.createNewItem}/>
+          : null}
         </Segment>
-        <Container items={this.itemToRender()} />
+        <Container items={this.itemToRender()}  deleteItem={this.deleteItem}/>
       </Fragment>
     );
   }
